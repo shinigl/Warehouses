@@ -1,9 +1,3 @@
-{
-    "builds": [
-      {
-        "src": "your-build-directory/**/*",
-        "use": "@vercel/static"
-      }
-    ]
-  }
+
   
+  { "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
