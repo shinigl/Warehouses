@@ -82,7 +82,7 @@ const WarehouseFilter = ({ warehouses, onFilter }) => {
           {/* Apply Filter Button */}
           <button
             onClick={handleFilter}
-            className="bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className= " cursor-pointer bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             Apply Filters
           </button>
