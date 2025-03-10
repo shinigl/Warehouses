@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import HomePage from '../Pages/HomePage';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  function onHeadingClick(){
+    navigate('/');
+  }
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -11,12 +17,12 @@ const Navbar = () => {
     <nav className="bg-black p-3 shadow-lg">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <h1 className="text-xl font-semibold text-white bg-indigo-600 px-8 py-2 rounded-xl shadow-lg">
+          <h1 onClick={onHeadingClick} className="cursor-pointer text-xl font-semibold text-white bg-indigo-600 px-8 py-2 rounded-xl shadow-lg">
             Warehouse
           </h1>
         </div>
         <div className="cursor-pointer hidden lg:flex space-x-10">
-          <p className="text-white hover:text-indigo-400 transition duration-200">Home</p>
+          <p onClick={onHeadingClick}  className="text-white hover:text-indigo-400 transition duration-200">Home</p>
           <p className="text-white hover:text-indigo-400 transition duration-200">About</p>
           <p className="text-white hover:text-indigo-400 transition duration-200">Services</p>
           <p className="text-white hover:text-indigo-400 transition duration-200">Contact</p>
